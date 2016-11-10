@@ -8,19 +8,19 @@ var cvpHandlers = {
 window.ondevicemotion = function(event) {
 	var log = document.querySelector(".log");
 	//
-	var percentage = Math.abs(event.accelerationIncludingGravity.x);
-	self.jumpTo(percentage);
+	//var percentage = Math.abs(Math.round(event.accelerationIncludingGravity.x));
+	var tiltLR = Math.round(((event.accelerationIncludingGravity.x) / 9.81) * -90);
 
-	log.innerHTML = percentage;
+
+	self.jumpTo(tiltLR);
+
+	log.innerHTML = tiltLR;
 
 	//console.log(event.accelerationIncludingGravity.x+" / "+event.accelerationIncludingGravity.y+" / "+event.accelerationIncludingGravity.z);
 }
 
 var CanvasVideoPlayer = function(options) {
 	var i;
-
-	var log = document.querySelector(".log");
-	log.innerHTML = "xxx";//event.accelerationIncludingGravity.x;
 
 	this.options = {
 		framesPerSecond: 25,
