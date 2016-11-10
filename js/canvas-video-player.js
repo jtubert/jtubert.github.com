@@ -6,11 +6,16 @@ var cvpHandlers = {
 };
 
 window.ondevicemotion = function(event) {
+	var log = document.querySelector(".log");
+	log.innerHTML.text = "xxx";//event.accelerationIncludingGravity.x;
 	console.log(event.accelerationIncludingGravity.x+" / "+event.accelerationIncludingGravity.y+" / "+event.accelerationIncludingGravity.z);
 }
 
 var CanvasVideoPlayer = function(options) {
 	var i;
+
+	var log = document.querySelector(".log");
+	log.innerHTML = "xxx";//event.accelerationIncludingGravity.x;
 
 	this.options = {
 		framesPerSecond: 25,
