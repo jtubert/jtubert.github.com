@@ -7,7 +7,7 @@ var cvpHandlers = {
 
 window.ondevicemotion = function(event) {
 	var log = document.querySelector(".log");
-	log.innerHTML.text = "xxx";//event.accelerationIncludingGravity.x;
+	log.innerHTML = event.accelerationIncludingGravity.x;
 	console.log(event.accelerationIncludingGravity.x+" / "+event.accelerationIncludingGravity.y+" / "+event.accelerationIncludingGravity.z);
 }
 
