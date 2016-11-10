@@ -5,6 +5,10 @@ var cvpHandlers = {
 	windowResizeHandler: null
 };
 
+window.ondevicemotion = function(event) {
+	console.log(event.accelerationIncludingGravity.x+" / "+event.accelerationIncludingGravity.y+" / "+event.accelerationIncludingGravity.z);
+}
+
 var CanvasVideoPlayer = function(options) {
 	var i;
 
