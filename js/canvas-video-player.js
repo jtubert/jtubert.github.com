@@ -12,7 +12,7 @@ window.ondevicemotion = function(event) {
 	var tiltLR = Math.round(((event.accelerationIncludingGravity.x) / 9.81) * -90);
 
 
-	self.jumpTo(tiltLR);
+	canvasVideo.jumpTo(tiltLR);
 
 	log.innerHTML = tiltLR;
 
