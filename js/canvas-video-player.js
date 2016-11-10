@@ -6,7 +6,7 @@ var cvpHandlers = {
 };
 
 window.ondevicemotion = function(event) {
-	var log = document.querySelector(".log");
+	//var log = document.querySelector(".log");
 	//
 	//var percentage = Math.abs(Math.round(event.accelerationIncludingGravity.x));
 	var tiltLR = Math.round(((event.accelerationIncludingGravity.x) / 9.81) * -90);
@@ -14,7 +14,7 @@ window.ondevicemotion = function(event) {
 
 	canvasVideo.jumpTo(tiltLR/100);
 
-	log.innerHTML = tiltLR/100;
+	//log.innerHTML = tiltLR/100;
 
 	//console.log(event.accelerationIncludingGravity.x+" / "+event.accelerationIncludingGravity.y+" / "+event.accelerationIncludingGravity.z);
 }
